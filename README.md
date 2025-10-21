@@ -36,7 +36,6 @@ Developer Tools
 Validation: Zod
 Logging: Winston & Pino
 Email: Nodemailer
-API Documentation: Swagger (via swagger-jsdoc & swagger-ui-express)
 Development: Nodemon, ts-node
 
 ```
@@ -54,7 +53,7 @@ The project follows a layered architecture pattern:
 │    Database (MongoDB + Redis)       │  ← Data persistence
 └─────────────────────────────────────┘
 ```
-```
+
 
 ### Design Patterns Used
 - **MVC Pattern**: Separation of concerns
@@ -62,7 +61,7 @@ The project follows a layered architecture pattern:
 - **Repository Pattern**: Data access abstraction through services
 - **Factory Pattern**: Used in JWT utilities
 
----
+
 
 ## ✨ Features
 
@@ -107,10 +106,7 @@ The project follows a layered architecture pattern:
 - Middleware-based authentication
 - Project admin authorization checks
 
----
-
 ## 📁 Folder Structure
-```
 ```
 TaskFlow/
 ├── config/
@@ -230,14 +226,29 @@ Content-Type: application/json
   "passwordConfirmation": "SecurePass123"
 }
 
-📝 API Endpoints
-Authentication
-MethodEndpointDescriptionPOST/api/user/usersRegister new userGET/api/user/verifyVerify emailPOST/api/user/sessionsLoginGET/api/user/getSessionsGet active sessionsPUT/api/user/deleteSessionLogout
-Projects
-MethodEndpointDescriptionPOST/api/v1/projects/addProjectCreate projectPUT/api/v1/projects/updateProject/:projectIdUpdate projectPUT/api/v1/projects/addMember/:projectIdAdd member
-Tasks
-MethodEndpointDescriptionPOST/api/tasks/add-taskCreate taskGET/api/tasks/get-tasksGet all tasksGET/api/tasks/single-task/:taskIdGet task by IDPUT/api/tasks/update-admin-task/:taskIdUpdate task (admin)
-
+# 📝 API Endpoints
+```
+Authentication:
+Method | Endpoint | Description 
+POST - /api/user/usersRegister - new user
+GET - /api/user/verifyVerify - email
+POST - /api/user/sessions - Login
+GET - /api/user/getSessionsGet - active sessions
+PUT - /api/user/deleteSession - Logout
+________________________________________
+Projects:
+Method | Endpoint | Description 
+POST - /api/v1/projects/addProject - Create project
+PUT - /api/v1/projects/updateProject/:projectId - Update project
+PUT - /api/v1/projects/addMember/:projectId - Add member
+________________________________________
+Tasks:
+Method | Endpoint | Description
+POST - /api/tasks/add-task - Create task
+GET - /api/tasks/get-tasksGet - all tasks
+GET - /api/tasks/single-task/:taskId - Get task by ID
+PUT - /api/tasks/update-admin-task/:taskIdUpdate - task (admin)
+```
 🧪 Testing
 Manual Testing
 
