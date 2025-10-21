@@ -39,7 +39,7 @@ Email: Nodemailer
 API Documentation: Swagger (via swagger-jsdoc & swagger-ui-express)
 Development: Nodemon, ts-node
 
-
+```
 🏗️ Architecture
 The project follows a layered architecture pattern:
 ┌─────────────────────────────────────┐
@@ -53,6 +53,7 @@ The project follows a layered architecture pattern:
 ├─────────────────────────────────────┤
 │    Database (MongoDB + Redis)       │  ← Data persistence
 └─────────────────────────────────────┘
+```
 ```
 
 ### Design Patterns Used
@@ -110,6 +111,7 @@ The project follows a layered architecture pattern:
 
 ## 📁 Folder Structure
 ```
+```
 TaskFlow/
 ├── config/
 │   └── default.ts              # Configuration settings
@@ -156,6 +158,7 @@ TaskFlow/
 ├── .env                        # Environment variables
 ├── package.json
 └── tsconfig.json              # TypeScript config
+```
 🚀 How to Run the Project
 Prerequisites
 
@@ -264,26 +267,6 @@ socket.on('taskCreated', (task) => console.log(task));
  Add two-factor authentication
  Set up CI/CD pipeline
  Add API rate limiting
-
-📸 Screenshots
-
-Note: Add screenshots of your API testing in Postman/Thunder Client, Socket.IO connections, and email notifications here.
-
-Example structure:
-markdown### User Registration
-![Registration](./screenshots/registration.png)
-
-### Email Verification
-![Email](./screenshots/email-verification.png)
-
-### Task Management
-![Tasks](./screenshots/tasks.png)
-
-### Real-time Updates
-![Socket](./screenshots/socket-io.png)
-
-🤝 Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
 
 Fork the project
 Create your feature branch (git checkout -b feature/AmazingFeature)
